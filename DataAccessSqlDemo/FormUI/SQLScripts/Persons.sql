@@ -1,4 +1,5 @@
 ﻿DROP TABLE IF EXISTS dbo.Persons
+GO
 
 CREATE TABLE dbo.Persons (
     [Id] INT IDENTITY (1,1)
@@ -8,6 +9,25 @@ CREATE TABLE dbo.Persons (
   , [PhoneNumber] VARCHAR(255) NOT NULL
   , CONSTRAINT [PK_Persons] PRIMARY KEY (Id)
 )
+GO
+
+create or alter procedure dbo.Persons_GetByLastName @p_LastName varchar(255)
+as
+begin
+  select [Id], [LastName], [FirstName], [EmailAddress], [PhoneNumber]
+  from dbo.Persons p
+  where p.LastName = @p_LastName
+end
+go
+
+create or alter procedure dbo.Persons_Insert @p_LastName varchar(255), @p_FirstName varchar(255), @p_EmailAddress varchar(255), @p_PhoneNumber varchar(255)
+as
+begin
+  insert into dbo.Persons ([LastName], [FirstName], [EmailAddress], [PhoneNumber])
+  values (@p_LastName, @p_FirstName, @p_EmailAddress, @p_PhoneNumber)
+end
+go
+
 
 insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Arte', 'Marvell', 'amarvell0@fema.gov', '807-535-8770');
 insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Valenka', 'Malthus', 'vmalthus1@cisco.com', '864-782-3452');
