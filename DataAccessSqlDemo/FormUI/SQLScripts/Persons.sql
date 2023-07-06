@@ -3,9 +3,9 @@ GO
 
 CREATE TABLE dbo.Persons (
     [Id] INT IDENTITY (1,1)
-  , [LastName] VARCHAR(255) NOT NULL
-  , [FirstName] VARCHAR(255) NOT NULL
-  , [EmailAddress] VARCHAR(255) NOT NULL
+  , [LastName] NVARCHAR(255) NOT NULL
+  , [FirstName] NVARCHAR(255) NOT NULL
+  , [EmailAddress] NVARCHAR(255) NOT NULL
   , [PhoneNumber] VARCHAR(255) NOT NULL
   , CONSTRAINT [PK_Persons] PRIMARY KEY (Id)
 )
