@@ -46,6 +46,8 @@ namespace FormUI
                 Email = emailAddress
                 };
 
+              output.Add(person);
+
               // Do something with the Person object
               Console.WriteLine($"Name: {person.FirstName} {person.LastName}, Email: {person.Email}");
             }

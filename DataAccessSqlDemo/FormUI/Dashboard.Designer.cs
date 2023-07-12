@@ -40,7 +40,7 @@
       this.personsFoundListBox.ItemHeight = 25;
       this.personsFoundListBox.Location = new System.Drawing.Point(51, 171);
       this.personsFoundListBox.Name = "personsFoundListBox";
-      this.personsFoundListBox.Size = new System.Drawing.Size(526, 504);
+      this.personsFoundListBox.Size = new System.Drawing.Size(1021, 279);
       this.personsFoundListBox.TabIndex = 0;
       // 
       // lastNameLabel
@@ -73,7 +73,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1131, 855);
+      this.ClientSize = new System.Drawing.Size(1131, 670);
       this.Controls.Add(this.searchButton);
       this.Controls.Add(this.lastNameTextBox);
       this.Controls.Add(this.lastNameLabel);

@@ -30,7 +30,7 @@ go
 
 
 insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Arte', 'Marvell', 'amarvell0@fema.gov', '807-535-8770');
-insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Valenka', 'Malthus', 'vmalthus1@cisco.com', '864-782-3452');
+insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Valenka', 'Marvell', 'vMarvell@cisco.com', '864-782-3452');
 insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Valentin', 'Kohler', 'vkohler2@wufoo.com', '992-339-1718');
 insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Ketti', 'Crowest', 'kcrowest3@skype.com', '583-869-9687');
 insert into Persons (firstname, lastname, emailaddress, phonenumber) values ('Ania', 'Longlands', 'alonglands4@wikia.com', '844-860-6303');

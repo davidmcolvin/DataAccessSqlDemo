@@ -18,8 +18,13 @@ namespace FormUI
     {
       InitializeComponent();
 
-      personsFoundListBox.DataSource = persons;
+      UpdateBinding();
       personsFoundListBox.DisplayMember = "FullInfo";
+    }
+
+    private void UpdateBinding()
+    {
+      personsFoundListBox.DataSource = persons;
     }
 
     private void searchButton_Click(object sender, EventArgs e)
@@ -28,6 +33,7 @@ namespace FormUI
 
       persons = db.GetPersons(lastNameTextBox.Text);
 
+      UpdateBinding();
 
     }
   }
