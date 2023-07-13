@@ -14,6 +14,8 @@ GO
 create or alter procedure dbo.Persons_GetByLastName @p_LastName varchar(255)
 as
 begin
+  set nocount on
+
   select [Id], [LastName], [FirstName], [EmailAddress], [PhoneNumber]
   from dbo.Persons p
   where p.LastName = @p_LastName
@@ -23,6 +25,8 @@ go
 create or alter procedure dbo.Persons_Insert @p_LastName varchar(255), @p_FirstName varchar(255), @p_EmailAddress varchar(255), @p_PhoneNumber varchar(255)
 as
 begin
+  set nocount on
+
   insert into dbo.Persons ([LastName], [FirstName], [EmailAddress], [PhoneNumber])
   values (@p_LastName, @p_FirstName, @p_EmailAddress, @p_PhoneNumber)
 end

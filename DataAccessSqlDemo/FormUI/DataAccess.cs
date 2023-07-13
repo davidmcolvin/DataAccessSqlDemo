@@ -20,19 +20,15 @@ namespace FormUI
       {
         using (SqlCommand command = new SqlCommand("Persons_GetByLastName", connection))
         {
-          // Set the command type to stored procedure
           command.CommandType = CommandType.StoredProcedure;
 
-          // Add the parameter to the command
           command.Parameters.AddWithValue("@p_LastName", lastNameSearchString);
 
 
           connection.Open();
 
-          // Execute the stored procedure
           using (SqlDataReader reader = command.ExecuteReader())
           {
-            // Process the results
             while (reader.Read())
             {
               // Retrieve column values using column names
@@ -48,8 +44,6 @@ namespace FormUI
 
               output.Add(person);
 
-              // Do something with the Person object
-              Console.WriteLine($"Name: {person.FirstName} {person.LastName}, Email: {person.Email}");
             }
           }
         }
