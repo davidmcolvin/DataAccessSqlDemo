@@ -14,6 +14,8 @@ namespace FormUI
   {
     List<Person> persons = new List<Person>();
 
+    DataAccess db = new DataAccess();
+
     public Dashboard()
     {
       InitializeComponent();
@@ -27,13 +29,20 @@ namespace FormUI
       personsFoundListBox.DataSource = persons;
     }
 
-    private void searchButton_Click(object sender, EventArgs e)
+    private void buttonSearch_Click(object sender, EventArgs e)
     {
-      DataAccess db = new DataAccess();
-
-      persons = db.GetPersons(lastNameTextBox.Text);
+      persons = db.GetPersons(textBoxLastNameSerach.Text);
 
       UpdateBinding();
+    }
+
+    private void buttonInsert_Click(object sender, EventArgs e)
+    {
+      db.InsertPerson(textBoxFirstNameInsert.Text, textBoxLastNameInsert.Text, textBoxEmailInsert.Text, textBoxPhoneInsert.Text);
+      textBoxFirstNameInsert.Text = "";
+      textBoxLastNameInsert.Text = "";
+      textBoxEmailInsert.Text = "";
+      textBoxPhoneInsert.Text = "";
 
     }
   }
